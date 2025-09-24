@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://0q3kba7abuly"]
+
+[ext_resource type="Script" uid="uid://b0broc7pk6ppu" path="res://scripts/control.gd" id="1_18n5q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_18n5q"]
+bg_color = Color(0, 0.7181246, 0.36675954, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ibsi0"]
+bg_color = Color(5.4387747e-06, 0.7151058, 0.41313007, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_18n5q")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 250.0
+offset_right = 596.0
+offset_bottom = 316.0
+
+[node name="PlayButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_18n5q")
+text = "Start Game"
+
+[node name="QuitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ibsi0")
+text = "Quit Game"
